@@ -6,7 +6,7 @@
 
 :root {
   --index: calc(1vw + 1vh);
-  --transition: 1.25s cubic-bezier(0.05, 0.5, 0, 1);
+  --transition: 1s cubic-bezier(0.05, 0.5, 0, 1);
 }
 
 @font-face {
@@ -44,6 +44,7 @@ body {
 
 .layers__container {
   height: 100vh;
+  min-height: 400px;
   transform-style: preserve-3d;
   transform: rotateX(var(--move-y)) rotateY(var(--move-x));
   will-change: transform;
@@ -93,7 +94,7 @@ body {
 
 .hero-content__title {
   text-transform: uppercase;
-  letter-spacing: calc(var(--index) * -0.6);
+  letter-spacing: calc(var(--index) * -0.38);
 }
 
 .hero-content span {
@@ -103,6 +104,35 @@ body {
 .hero-content__p {
   font-family: merriweather-italic-3d;
   letter-spacing: normal;
-  font-size: calc(var(--index) * .75);
+  font-size: calc(var(--index) * 0.75);
   line-height: 3;
+}
+
+.button-start {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 0.7);
+  letter-spacing: -0.01vw;
+  padding: calc(var(--index) * 0.7) calc(var(--index) * 1.25);
+  color: #fff;
+  border-radius: 10em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.button-start:hover {
+  background: rgba(255, 255, 255, 0.25);
+  font-size: calc(var(--index) * 0.75);
+}
+
+.layer-4,
+.layer-5,
+.layer-6 {
+  pointer-events: none;
 }
